@@ -1,0 +1,19 @@
+<!-- views/home.html -->
+
+<div class="form-group">
+    <label>İsminiz:</label>
+    <input class="form-control" type="text" ng-model="name" />
+</div>
+
+<button type="button" class="btn btn-primary" ng-click="addName()">Kaydet</button>
+
+<hr />
+
+<ul class="list-group">
+    <!-- ng-repeat, bir dizi değişkeni üzerinde dönmenize olanak sağlar
+         burada olduğu üzere, isimler üzerinde dönüp onu liste
+         olarak yazdırmamızı sağlıyor -->
+    <li class="list-group-item" ng-repeat="selectedName in names">
+        {{selectedName}}
+    </li>
+</ul>
